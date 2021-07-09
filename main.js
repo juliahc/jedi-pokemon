@@ -34,14 +34,14 @@ var pintaPokemon = (p) => {
 };
 
 const pokemonInici = () => {
-    var request = "https://jedi-pokemon.herokuapp.com/1";
+    var request = "https://jedi-pokemon.herokuapp.com/pokemons/1";
     buscaPokemon(request)
         .then(p =>  pintaPokemon(p))
         .catch(err => console.log(err))
 };
 
 const actualitza = () => {
-    var request = `https://jedi-pokemon.herokuapp.com/${p_act}`;
+    var request = `https://jedi-pokemon.herokuapp.com/pokemons/${p_act}`;
     console.log("He entrat a actualitza");
     buscaPokemon(request)
         .then(p => {
@@ -68,8 +68,8 @@ const search = () => {
     var t =  $("#text").val();
     let nom = isNaN(t);
     let request;
-    if (nom) request = `https://jedi-pokemon.herokuapp.com/?name=${t}`;
-    else request = `https://jedi-pokemon.herokuapp.com/?num=${t}`;
+    if (nom) request = `https://jedi-pokemon.herokuapp.com/pokemons/?name=${t}`;
+    else request = `https://jedi-pokemon.herokuapp.com/pokemons/?num=${t}`;
     buscaPokemon(request)
         .then(p => {
             p_act = p[0].id;
