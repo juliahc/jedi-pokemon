@@ -1,0 +1,28 @@
+.felx-center-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title {
+    text-align: center;
+}
+.wrapper {
+    min-height: 90vh;
+}
+.title, .table {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.felx-center-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.controls > * {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+td, th {
+    height: 100px;
+    vertical-align: center;
+}
